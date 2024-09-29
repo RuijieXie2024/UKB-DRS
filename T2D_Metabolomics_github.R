@@ -8,30 +8,15 @@
 # Load Required Packages
 # ---------------------------
 
-# Survival analysis
 library(survival)
-
-# LASSO regression
 library(glmnet)
-
-# NRI and IDI for survival data
 library(survIDINRI)
 library(nricens)
-
-# Predict survival probabilities
 library(pec)
-
-# Data manipulation
 library(dplyr)
 library(tidyr)
-
-# Parallel processing
 library(doParallel)
-
-# Imputation
 library(missForest)
-
-# Plotting
 library(ggplot2)
 library(runway)
 
@@ -278,7 +263,7 @@ cat('C-index for New Model (External Data):', round(cindex_new_external, 3), '\n
 ####################CompareC##########################
 result <- compareC(timeX = your_data$dur_diab, statusX = your_data$i_diab, scoreY = your_data$risk_old, scoreZ = your_data$risk_new)
 
-# 查看结果
+# print result
 print(result)
 
 est_diff_c <- 0.0126978
