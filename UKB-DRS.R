@@ -173,7 +173,7 @@ combined_plot <- grid.arrange(p1, p2, ncol = 2)
 # ---------------------------
 
 # Combine clinical variables and metabolite variables
-predictor_vars <- c('Age', 'Sex', 'BMI', 'FamilyHistory', 'SmokingStatus', 'BloodPressure', 'SteroidUse', 'HbA1c', metabolite_vars)
+predictor_vars <- c(metabolite_vars)
 
 # Prepare data for variable selection
 X <- as.matrix(training_data_imputed[, predictor_vars])
